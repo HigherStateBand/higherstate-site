@@ -122,15 +122,15 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.82)),
-        url("band-photo.jpg") center/cover no-repeat;
-      transform: scale(1.02);
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.82)),
+    url("band-photo.jpg") center 30% / cover no-repeat;
+  transform: scale(1.02);
+}
 
     .hero::after {
       content: "";
@@ -145,7 +145,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 110px 0 80px;
+  padding: 180px 0 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
