@@ -138,34 +138,20 @@
 }
 
 @media (max-width: 640px) {
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.84)),
-      url("band-photo.jpg") 38% center / cover no-repeat;
-    transform: scale(1);
-  }
+.hero {
+  min-height: auto !important;
+  padding-top: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+    url("band-photo.jpg") center top / contain no-repeat !important;
 }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
-      pointer-events: none;
-    }
+.hero::before {
+  display: none !important;
+}
 
 .hero-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 510px 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 360px 0 56px !important;
   text-align: center;
 }
 
