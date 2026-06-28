@@ -476,24 +476,22 @@
     white-space: normal;
   }
 
-  .hero {
-    min-height: 100svh;
-  }
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.hero {
+  min-height: auto !important;
+  padding-top: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.84)),
-    url("band-photo-mobile.jpg") center top / contain no-repeat !important;
-  transform: scale(1) !important;
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+    url("band-photo.jpg") center top / contain no-repeat !important;
 }
 
-  .hero-inner {
-    padding: 180px 0 56px !important;
-    text-align: center;
-  }
+.hero::before {
+  display: none !important;
+}
+
+.hero-inner {
+  padding: 360px 0 56px !important;
+  text-align: center;
+}
 
   .logo-wrap,
   .hero-copy {
