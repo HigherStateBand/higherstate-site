@@ -459,72 +459,135 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .section {
-        padding: 72px 0;
-      }
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden;
+  }
 
-      .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .container {
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-      .nav {
-        justify-content: flex-start;
-        gap: 12px 16px;
-      }
+  .section {
+    padding: 56px 0 !important;
+  }
 
-      .hero {
-  min-height: 92svh;
+  .topbar-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    justify-content: flex-start;
+  }
+
+  .brand {
+    white-space: normal;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.84)),
+      url("band-photo.jpg") 28% center / cover no-repeat !important;
+    transform: scale(1) !important;
+  }
+
+  .hero-inner {
+    padding: 180px 0 56px !important;
+    text-align: center;
+  }
+
+  .logo-wrap,
+  .hero-copy {
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy p {
+    font-size: 1rem;
+  }
+
+  .cta-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: none !important;
+  }
+
+  .video-grid,
+  .about-grid,
+  .links-grid,
+  .contact-grid,
+  .cta-grid,
+  .footer-inner {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .video-frame,
+  .video-copy,
+  .about-card,
+  .symbol-box,
+  .links-panel,
+  .contact-panel,
+  .cta-panel {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .video-frame iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-copy,
+  .about-card,
+  .links-panel,
+  .contact-panel,
+  .cta-panel,
+  .link-card,
+  .symbol-box {
+    padding: 24px !important;
+  }
+
+  .link-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .link-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    gap: 12px;
+  }
 }
-
-.hero::before {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.84)),
-    url("band-photo.jpg") 72% center / cover no-repeat;
-  transform: scale(1);
-}
-
-.hero-inner {
-  padding: 220px 0 64px;
-}
-
-.logo-wrap,
-.hero-copy {
-  max-width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn {
-  width: 100%;
-  max-width: 320px;
-}
-      
-      .brand {
-        white-space: normal;
-      }
-
-      .video-card,
-      .about-card,
-      .contact-card,
-      .symbol-card {
-        padding: 22px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .cta-row {
-        flex-direction: column;
-      }
-
-      .link-item {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 <body>
